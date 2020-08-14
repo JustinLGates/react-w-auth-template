@@ -7,7 +7,7 @@ const LoginButton = () => {
   return (
     <Button
       onClick={() => loginWithRedirect()}
-      variant="primary"
+      // variant="primary"
       className="btn-margin"
     >
       Log In

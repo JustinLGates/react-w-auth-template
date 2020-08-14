@@ -9,12 +9,6 @@
   dependencies:
     "@auth0/auth0-spa-js" "^1.9.0"
 
-"@auth0/auth0-react@auth0/auth0-react":
-  version "1.0.0"
-  resolved "https://codeload.github.com/auth0/auth0-react/tar.gz/7bde6b71d41fc3810f7ace551b362cf508153e90"
-  dependencies:
-    "@auth0/auth0-spa-js" "^1.9.0"
-
 "@auth0/auth0-spa-js@^1.9.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@auth0/auth0-spa-js/-/auth0-spa-js-1.11.0.tgz#800a59ddeaa11ad8a94a699c58f9971842ea065f"

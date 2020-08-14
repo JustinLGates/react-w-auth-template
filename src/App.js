@@ -1,10 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import Auth0ProviderWithHistory from "./auth0-provider-with-history";
+import { Nav } from "./Components/Nav";
+
 function App() {
-  return <App />;
+  return (
+    <div className="">
+      <Nav />
+    </div>
+  );
 }
 
 export default App;

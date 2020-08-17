@@ -25,16 +25,24 @@ export const Nav = () => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          <li className="nav-item ">
             <Link className="nav-link" to="/home">
               Home
             </Link>
           </li>
+
           <li className="nav-item">
             <Link className="nav-link" to="/about">
               About
             </Link>
           </li>
+          {isAuthenticated && (
+            <li className="nav-item ">
+              <Link className="nav-link" to="/profile">
+                Profile
+              </Link>
+            </li>
+          )}
         </ul>
         <span className="form-inline my-2 my-lg-0">
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}

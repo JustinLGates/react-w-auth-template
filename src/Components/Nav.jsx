@@ -31,8 +31,8 @@ export const Nav = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/link">
-              Link
+            <Link className="nav-link" to="/about">
+              About
             </Link>
           </li>
         </ul>

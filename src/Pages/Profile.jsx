@@ -11,22 +11,20 @@ async function makeRequest() {
   }
 }
 const Profile = () => {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
-  const [userMetadata, setUserMetadata] = useState(null);
-  // (async () => setBearer("Bearer " + (await getAccessTokenSilently())))();
+  const { user, isAuthenticated } = useAuth0();
+  const [userMetadata] = useState(null);
   return (
     isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.nickname}</h2>
-        <p>{user.email}</p>
-        <button onClick={makeRequest}>Make api request</button>
-        <h3>User Metadata</h3>
-        {userMetadata ? (
-          <pre>{JSON.stringify(userMetadata, null, 2)}</pre>
-        ) : (
-          "No user metadata defined"
-        )}
+      <div className="d-flex flex-column justify-content-center align-items-center pt-3 mt-2">
+        <div className="">
+          <img src={user.picture} alt={user.name} />
+          <h2>{user.nickname}</h2>
+          <p>{user.email}</p>
+        </div>
+
+        <button className="btn btn-dark" onClick={makeRequest}>
+          Make api request
+        </button>
       </div>
     )
   );

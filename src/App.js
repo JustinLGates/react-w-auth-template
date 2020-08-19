@@ -10,7 +10,13 @@ import { setBearer } from "./axios";
 
 function App() {
   const { isAuthenticated, getAccessTokenSilently } = useAuth0();
-  (async () => setBearer("Bearer " + (await getAccessTokenSilently())))();
+  try {
+    if (isAuthenticated) {
+      (async () => setBearer("Bearer " + (await getAccessTokenSilently())))();
+    }
+  } catch (error) {
+    console.error(error);
+  }
   return (
     <div className="">
       <Nav />

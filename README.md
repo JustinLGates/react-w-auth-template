@@ -1,24 +1,24 @@
 # React with Auth0 template description
 
-This is a template for building react applications. Auth0 authentication is already build in, just add your private info in a .env file. This template also includes bootstrap, react-router-dom, and axios. I plan on adding redux in the near future.
+This is a template for building react applications. Auth0 authentication is already built-in, just add your private info in a .env file. This template also includes bootstrap, react-router-dom, and Axios.
 
 # Getting started
 
 ## Step 1:
 
-Click "use this template" button and give your repo a name.
+Click the "use this template" button and give your repo a name.
 
 ## Step 2:
 
-Using your cli use the "git clone yourRepoClone" to clone your repo.
+Using your terminal/command-line use the "git clone yourRepoClone" to clone your repo.
 
 ## Step 3:
 
 cd into "yourRepoClone"
 
-## step 4:
+## Step 4:
 
-Run npm i to install dependencies
+Run npm install to install dependencies
 
 ## Step 5:
 
@@ -31,4 +31,4 @@ REACT_APP_AUDIENCE = YourAudienceHere
 
 ## Step 6:
 
-Nmp start
+Using your terminal/command-line run "nmp start"

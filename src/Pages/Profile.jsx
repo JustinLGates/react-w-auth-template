@@ -4,11 +4,8 @@ import { api, setBearer } from "../axios";
 
 async function makeRequest() {
   try {
-    let res = await api.get("messages");
-    console.log(res.data);
-  } catch (error) {
-    console.error(error);
-  }
+    let res = await api.get("api/endpoint"); //Add endpoint here to test
+  } catch (error) {}
 }
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();

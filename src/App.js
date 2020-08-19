@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import About from "./Pages/AboutPage";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
+import landingPage from "./Pages/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
 import { setBearer } from "./axios";
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="">
       <Nav />
+      <Route path="/" exact component={landingPage} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/about" exact component={About} />
       <Route path="/home" exact component={Home} />

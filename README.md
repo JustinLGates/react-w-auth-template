@@ -1,6 +1,6 @@
 # React with Auth0 template description
 
-This is a template for building react applications. Auth0 authentication is already built-in, just add your private info in a .env file. This template also includes bootstrap, react-router-dom, and Axios.
+This is a template for building react applications. Auth0 authentication is already built-in, just add your private info in a .env file. This template also includes Redux, Bootstrap, React-router, and Axios.
 
 # Getting started
 

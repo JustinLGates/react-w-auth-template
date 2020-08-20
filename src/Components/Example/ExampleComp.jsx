@@ -19,19 +19,19 @@ export function ExampleComp() {
         <div className="col-12 text-center text-dark p-3">
           <h1>Redux Store Example </h1>
         </div>
-        <div className="col-12 d-flex justify-content-center">
+        <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-8 d-flex justify-content-center m-auto">
           <button
-            className="btn btn-primary m-2 p-2"
+            className="btn btn-primary m-2 p-2 w-100"
             aria-label="Increment value"
             onClick={() => dispatch(increment())}
           >
             <h1>+</h1>
           </button>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center justify-content-center w-100">
             <h2 className="p-0 m-0 px-2">{count}</h2>
           </div>
           <button
-            className="btn btn-danger p-2 m-2"
+            className="btn btn-danger p-2 m-2 w-100"
             aria-label="Decrement value"
             onClick={() => dispatch(decrement())}
           >

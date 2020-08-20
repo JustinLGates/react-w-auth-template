@@ -10,8 +10,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { setBearer } from "./axios";
 import { resetBearer } from "./axios";
 function App() {
-  // If the user is authenticated the beraer token will be set in axios and sent with all requests.
-  //If they are not authenticated the token will be set to "".
+  //NOTE If the user is authenticated the beraer token will be set in axios and sent with all
+  //requests.If they are not authenticated the token will be set to "".
   const { isAuthenticated, getAccessTokenSilently } = useAuth0();
   if (isAuthenticated) {
     try {

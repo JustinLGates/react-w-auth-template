@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ExampleComp } from "../Components/Example/ExampleComp";
 const LandingPage = () => {
   return (
-    <div>
+    <div className="container-fluid">
       <ExampleComp />
     </div>
   );

@@ -6,9 +6,7 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
-  cart,
 } from "./Slice";
-import styles from "./Example.module.css";
 
 export function ExampleComp() {
   const count = useSelector(selectCount);
@@ -16,45 +14,55 @@ export function ExampleComp() {
   const [incrementAmount, setIncrementAmount] = useState("2");
 
   return (
-    <div>
-      <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          +
-        </button>
-        <span className={styles.value}>{count}</span>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
-      </div>
-      <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          aria-label="Set increment amount"
-          value={incrementAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)}
-        />
-        <button
-          className={styles.button}
-          onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
-          }
-        >
-          Add Amount
-        </button>
-        <button
-          className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
-        >
-          Add Async
-        </button>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-12 text-center text-dark p-3">
+          <h1>Redux Store Example </h1>
+        </div>
+        <div className="col-12 d-flex justify-content-center">
+          <button
+            className="btn btn-primary m-2 p-2"
+            aria-label="Increment value"
+            onClick={() => dispatch(increment())}
+          >
+            <h1>+</h1>
+          </button>
+          <div className="d-flex align-items-center">
+            <h2 className="p-0 m-0 px-2">{count}</h2>
+          </div>
+          <button
+            className="btn btn-danger p-2 m-2"
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}
+          >
+            <h1> -</h1>
+          </button>
+        </div>
+        <div className="col-12 text-center">
+          <input
+            className="p-2 m-2"
+            aria-label="Set increment amount"
+            value={incrementAmount}
+            onChange={(e) => setIncrementAmount(e.target.value)}
+          />
+          <br />
+          <button
+            className="btn btn-primary p-2 m-2"
+            onClick={() =>
+              dispatch(incrementByAmount(Number(incrementAmount) || 0))
+            }
+          >
+            Add Amount
+          </button>
+          <button
+            className="btn btn-primary p-2 m-2"
+            onClick={() =>
+              dispatch(incrementAsync(Number(incrementAmount) || 0))
+            }
+          >
+            Add Async
+          </button>
+        </div>
       </div>
     </div>
   );

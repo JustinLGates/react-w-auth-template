@@ -1,0 +1,15 @@
+.pos-absolute {
+  position: absolute;
+}
+
+.bg-background {
+  background-color: rgb(246, 250, 251);
+}
+
+.mh-100 {
+  min-height: 100vh;
+}
+
+.text-medium {
+  font-size: large;
+}

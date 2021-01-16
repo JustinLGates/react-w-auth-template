@@ -7,7 +7,7 @@ export const Nav = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       <Link className="navbar-brand" to="/">
         Navbar
       </Link>

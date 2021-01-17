@@ -6,6 +6,7 @@ import About from "./Pages/AboutPage";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import landingPage from "./Pages/LandingPage";
+import quote from "./Pages/Quote";
 import { useAuth0 } from "@auth0/auth0-react";
 import { setBearer } from "./axios";
 import { resetBearer } from "./axios";
@@ -29,6 +30,7 @@ function App() {
       <Route path="/profile" exact component={Profile} />
       <Route path="/about" exact component={About} />
       <Route path="/home" exact component={Home} />
+      <Route path="/quote" exact component={quote} />
     </div>
   );
 }

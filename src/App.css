@@ -10,6 +10,23 @@
   min-height: 100vh;
 }
 
+.text-bold {
+  font-size: large;
+  font-weight: bold;
+}
+.text-large {
+  font-size: large;
+}
+
 .text-medium {
   font-size: large;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-1 {
+  font-size: xx-large;
+  font-weight: bold;
 }

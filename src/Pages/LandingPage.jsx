@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="container-fluid bg-background ">
@@ -24,7 +25,8 @@ const LandingPage = () => {
             </button>
           </div>
           <div className="py-2">
-            <button className="btn btn-outline-success"><h5>Get a quote <i class="fas fa-angle-double-right"></i></h5></button>
+            
+            <h5><Link className="btn btn-outline-success" to="/quote">Get a quote <i className="fas fa-angle-double-right"></i></Link></h5>
           </div>
         </div>
       </div>

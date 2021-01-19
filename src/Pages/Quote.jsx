@@ -1,13 +1,12 @@
 import React from "react";
 import PriceCalculator from "../Components/PriceCalculator"
-
 const Quote = () => {
   return (
     <div className="container-fluid bg-background ">
       <div className="row">
         <div className="col-12 p-4">
-          <h1 className="text-md-left text-center">Fair transparent pricing.</h1>
-          <p className="text-md-left text-center">We have a formula for pricing so just enter your information and you will know exactly what it will cost to have the service you want.</p>
+          <h1 className="text-md-left text-center p-2">Fair transparent pricing.</h1>
+          <p className="text-md-left text-center text-large p-2">We have a formula for pricing. Just enter your information and we will calculate the cost.</p>
         </div>
       </div>
       <div className="row">

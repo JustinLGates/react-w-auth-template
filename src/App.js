@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import landingPage from "./Pages/LandingPage";
 import quote from "./Pages/Quote";
+import subscribe from "./Pages/SignupForService";
 import { useAuth0 } from "@auth0/auth0-react";
 import { setBearer } from "./axios";
 import { resetBearer } from "./axios";
@@ -31,6 +32,7 @@ function App() {
       <Route path="/about" exact component={About} />
       <Route path="/home" exact component={Home} />
       <Route path="/quote" exact component={quote} />
+      <Route path="/subscribe" exact component={subscribe} />
     </div>
   );
 }

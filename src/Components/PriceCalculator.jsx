@@ -1,8 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import SignupButton from "../Components/Signup"
 import { useAuth0 } from "@auth0/auth0-react";
-import { Link } from "react-router-dom";
+import { Link, Route, Router, useHistory } from "react-router-dom";
 
 const PriceCalculator = () => {
   const base = 11;
@@ -15,8 +14,7 @@ const PriceCalculator = () => {
   const [frequency, setFrequency] = useState("Weekly");
   const [detailsHidden, setDetailsHidden] = useState(true);
 
-
-  
+  const { loginWithRedirect } = useAuth0();
   const { isAuthenticated } = useAuth0();
 
   function updateTotals(dogs, weeks) {
@@ -64,7 +62,7 @@ function toggleDetails() {
         <label className="p-2 text-bold" htmlFor="">Number of Dogs: </label>
         <label className="p-2" htmlFor="">{dogs}</label>
         <button onClick={()=>updateDogs( dogs + 1 )} className="btn btn-outline-success mx-2"><i class="fas fa-plus"></i></button>
-        <button onClick={()=>updateDogs( dogs > 1 ? dogs-1 : 0 )} className="btn btn-outline-danger mx-2"><i class="fas fa-minus"></i></button>
+        <button onClick={()=>updateDogs( dogs > 1 ? dogs-1 : 0 )} className="btn btn-outline-secondary mx-2"><i class="fas fa-minus"></i></button>
 
       </div>
     </div>
@@ -118,8 +116,8 @@ function toggleDetails() {
 
 
   <div className="row m-0 px-2">
-    <div className="col-12 text-center">
-      <p className="p-2 py-4 text-success text-bold"><i class="fas fa-angle-double-down px-2"></i> Save 15% on your first month of service by signing up today. <i class="fas fa-angle-double-down px-2"></i></p>
+    <div className="col-12 text-center pt-4">
+      <p className="px-2 py-0 text-success text-bold"><i class="fas fa-angle-double-down px-2"></i> Save 15% on your first month of service by signing up today. <i class="fas fa-angle-double-down px-2"></i></p>
     </div>
   </div>
 
@@ -156,13 +154,16 @@ function toggleDetails() {
       </div>
       <div className="row">
     <div className="col-12 p-2">
-      {isAuthenticated ?
-     <Link className="btn btn-outline-success" to="/profile">
-     View Profile
-   </Link>
-    :
-    <SignupButton/>
-      }
+
+    <div className="p-4">
+    <button
+    onClick={() => loginWithRedirect({redirectUri:"http://localhost:3000/profile"})}
+    className="btn btn-outline-success text-bold w-100"
+    >
+    Create account
+  </button>
+    </div>
+      
     </div>
   </div>
 

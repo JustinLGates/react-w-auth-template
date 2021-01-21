@@ -5,7 +5,7 @@ const SignupButton = () => {
   const { loginWithPopup } = useAuth0();
   return (
     <button
-      onClick={() => loginWithPopup()}
+      onClick={() => loginWithPopup({ redirectUrl:"http://localhost:3000/profile"})}
       className="btn btn-outline-success text-bold"
     >
       Create account

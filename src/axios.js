@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 let base = window.location.host.includes("localhost")
-  ? "//localhost:5000/"
+  ? "//localhost:3007/api/"
   : "/";
 
 export const api = Axios.create({
@@ -12,7 +12,27 @@ export const api = Axios.create({
 
 export const setBearer = function (bearer) {
   api.defaults.headers.authorization = bearer;
+  console.log("setbearer gettingProfile......");
+  getProfile();
 };
 export const resetBearer = function () {
   api.defaults.headers.authorization = "";
 };
+
+async function getProfile() {
+  try {
+    let res = await api.get("profile");
+    console.log(res.data);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+async function updateProfile(id, data) {
+  try {
+    let res = await api.put(`/profile/${id}`, data);
+    console.log(res.data);
+  } catch (e) {
+    console.log(e);
+  }
+}

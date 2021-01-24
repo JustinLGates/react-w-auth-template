@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import SignupComponent from "../Components/SignupComponent"
-import Profile from "./Profile"
+import Profile from "./Dashboard"
 import SignupButton from "../Components/Signup"
 
 const SignUpForService = (props) => {

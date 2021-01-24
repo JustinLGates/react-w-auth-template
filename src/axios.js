@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 let base = window.location.host.includes("localhost")
-  ? "//localhost:3007/api/"
+  ? "//localhost:3007/"
   : "/";
 
 export const api = Axios.create({
@@ -23,6 +23,7 @@ async function getProfile() {
   try {
     let res = await api.get("profile");
     console.log(res.data);
+    updateProfile(res.data.id, { firstName: "Justin", lastName: "Gates" });
   } catch (e) {
     console.log(e);
   }

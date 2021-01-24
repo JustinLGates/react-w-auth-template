@@ -30,3 +30,7 @@
   font-size: xx-large;
   font-weight: bold;
 }
+
+.num-box {
+  max-width: 60px;
+}

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Link, Route, Router, useHistory } from "react-router-dom";
 
 const PriceCalculator = () => {
   const base = 11;
@@ -22,9 +21,16 @@ const PriceCalculator = () => {
   setTotalPerVisit(dogs * pricePerDog * weeks + base)
 }
 
-function updateDogs(value) {
+function d(value) {
   setDogs(value)
   updateTotals(value, weeks)
+}
+
+const handleChangeDogs = tags => (event) => {
+  event.preventDefault();
+  setDogs(event.target.value);
+  updateTotals(event.target.value, weeks)
+
 }
 
 function updateWeeks(weeks) {
@@ -53,16 +59,27 @@ function toggleDetails() {
 <div className="border shadow p-3 bg-light">
   <div className="row">
     <div className="col-12 p-2">
-      <h3 className="p-2">Easy price calculator</h3>
+      <h2 className="p-2">Easy price calculator</h2>
     </div>
   </div>
   <div className="row m-0 border-bottom p-2 d-flex justify-content-center align-items-center">
     <div className="col-9 col-md-8">
       <div>
-        <label className="p-2 text-bold" htmlFor="">Number of Dogs: </label>
-        <label className="p-2" htmlFor="">{dogs}</label>
-        <button onClick={()=>updateDogs( dogs + 1 )} className="btn btn-outline-success mx-2"><i class="fas fa-plus"></i></button>
-        <button onClick={()=>updateDogs( dogs > 1 ? dogs-1 : 0 )} className="btn btn-outline-secondary mx-2"><i class="fas fa-minus"></i></button>
+        
+      <label className="text-bold"  for="City">Number of dogs</label>
+       <select  onChange={handleChangeDogs("tags")} 
+          className="form-control num-box " name="NumberOfDogs" id="NumberOfDogs">
+         <option  value={1}>1</option>
+         <option  value={2}>2</option>
+         <option  value="3">3</option>
+         <option  value="4">4</option>
+         <option  value="5">5</option>
+         <option  value="6">6</option>
+         <option  value="7">7</option>
+         <option  value="8">8</option>
+         <option  value="9">9</option>
+         <option  value="10">10</option>
+       </select>
 
       </div>
     </div>
@@ -158,8 +175,7 @@ function toggleDetails() {
     <div className="p-4">
     <button
     onClick={() => loginWithRedirect({redirectUri:"http://localhost:3000/profile"})}
-    className="btn btn-outline-success text-bold w-100"
-    >
+    className="btn btn-outline-success text-bold w-100">
     Create account
   </button>
     </div>

@@ -4,7 +4,7 @@ import { Nav } from "./Components/Nav";
 import { Route } from "react-router-dom";
 import About from "./Pages/AboutPage";
 import Home from "./Pages/Home";
-import Profile from "./Pages/Profile";
+import Dashboard from "./Pages/Dashboard";
 import landingPage from "./Pages/LandingPage";
 import quote from "./Pages/Quote";
 import subscribe from "./Pages/SignupForService";
@@ -28,7 +28,7 @@ function App() {
     <div className="">
       <Nav />
       <Route path="/" exact component={landingPage} />
-      <Route path="/profile" exact component={Profile} />
+      <Route path="/profile" exact component={Dashboard} />
       <Route path="/about" exact component={About} />
       <Route path="/home" exact component={Home} />
       <Route path="/quote" exact component={quote} />
